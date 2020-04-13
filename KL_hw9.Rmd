@@ -1,0 +1,29 @@
+---
+title: Assignment 9
+author: Katy Linich
+date: 13 April, 2020
+output: html_notebook
+---
+
+#1-------------------------------------------------------------------------------------------------
+```{r}
+library(tidyverse)
+ptsd_points <- ggplot(Sexual_Abuse_Data, aes(csa, ptsd, color=csa))
+ptsd_data <- ptsd_points+geom_point()
+ptsd_data
+```
+
+#2-------------------------------------------------------------------------------------------------
+
+```{r}
+abuse_points <- ggplot(Sexual_Abuse_Data, aes(csa, cpa, color=csa))
+abuse_plot <- abuse_points+geom_point()
+abuse_plot
+```
+
+#3-------------------------------------------------------------------------------------------------
+```{r}
+score_points <- ggplot(Sexual_Abuse_Data, aes(cpa, ptsd, color=csa))
+sex_abuse_plot <- score_points+geom_point()+geom_smooth(method = 'lm')
+sex_abuse_plot
+```
